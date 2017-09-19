@@ -56,8 +56,7 @@ RUN apt-get update \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $buildDeps
 
 # Add configs
-COPY etc/*.ini /usr/local/etc/php/
-RUN cd /usr/local/etc/php && cp prod.ini conf.d/environment.ini
+RUN cd /usr/local/etc/php && cp conf/prod.ini conf/environment.ini
 
 
-WORKDIR ../crm
+WORKDIR ../project

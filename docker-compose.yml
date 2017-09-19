@@ -15,7 +15,7 @@ services:
   php:
     container_name: cobooks-php
     build:
-      context: ./php7-fpm
+      context: ./php
     links:
       - mysql
       - memcached
